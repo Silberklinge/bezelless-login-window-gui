@@ -1,0 +1,33 @@
+.check-box *.box {
+  -fx-background-color: #f4f4f4;
+  -fx-background-radius: 0;
+  -fx-background-insets: 1;
+}
+
+#login_button {
+	-fx-background-color: transparent;
+	-fx-border-width: 1.5px;
+	-fx-border-color: #f4f4f4;
+	-fx-border-radius: 15px;
+}
+
+#minimize_button {
+	-fx-background-color: transparent;
+	-fx-border-width: 1.5px;
+	-fx-border-color: #f4f4f4;
+	-fx-border-radius: 50%;
+}
+
+#maximize_button {
+	-fx-background-color: transparent;
+	-fx-border-width: 1.5px;
+	-fx-border-color: #f4f4f4;
+	-fx-border-radius: 50%;
+}
+
+#close_button {
+	-fx-background-color: transparent;
+	-fx-border-width: 1.5px;
+	-fx-border-color: #f4f4f4;
+	-fx-border-radius: 50%;
+}

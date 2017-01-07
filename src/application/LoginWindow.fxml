@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #1e90ff;" stylesheets="@LoginWindow.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginWindowController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="500.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox fx:id="titlebar" minHeight="25.0" prefHeight="25.0" VBox.vgrow="NEVER">
+               <children>
+                  <Region prefHeight="25.0" prefWidth="419.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="minimize_button" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#minimize" prefHeight="20.0" prefWidth="20.0" text="-" textAlignment="CENTER" textFill="#f4f4f4">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Raleway Light" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="maximize_button" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#maximize" prefHeight="20.0" prefWidth="20.0" text="+" textAlignment="CENTER" textFill="#f4f4f4">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Raleway Light" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="close_button" alignment="CENTER" contentDisplay="CENTER" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#close" prefHeight="20.0" prefWidth="20.0" text="x" textAlignment="CENTER" textFill="#f4f4f4">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Raleway Light" size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="150.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../worldmap.png" />
+                     </image>
+                  </ImageView>
+                  <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox prefHeight="80.0" prefWidth="200.0" VBox.vgrow="NEVER">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox prefHeight="200.0" prefWidth="400.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="username" textAlignment="CENTER" textFill="#f4f4f4">
+                           <font>
+                              <Font name="Raleway Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="username_field" onKeyPressed="#handleKeyPress" promptText="enter your username" style="-fx-background-radius: 0; -fx-background-color: #f4f4f4;">
+                           <effect>
+                              <InnerShadow color="#b0b0b0" height="25.0" radius="12.0" width="25.0" />
+                           </effect>
+                           <font>
+                              <Font name="Raleway Regular" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="235.0" prefHeight="80.0" prefWidth="200.0" VBox.vgrow="NEVER">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox prefHeight="200.0" prefWidth="400.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="password" textAlignment="CENTER" textFill="#f4f4f4">
+                           <font>
+                              <Font name="Raleway Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="password_field" onKeyPressed="#handleKeyPress" promptText="enter your password" style="-fx-background-radius: 0; -fx-background-color: #f4f4f4;">
+                           <effect>
+                              <InnerShadow color="#b0b0b0" height="25.0" radius="12.0" width="25.0" />
+                           </effect>
+                           <font>
+                              <Font name="Raleway Regular" size="15.0" />
+                           </font>
+                        </PasswordField>
+                        <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="200.0" VBox.vgrow="NEVER">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="remember me" textFill="#f4f4f4">
+                     <effect>
+                        <InnerShadow color="#b0b0b0" height="20.0" radius="9.5" width="20.0" />
+                     </effect>
+                     <font>
+                        <Font name="Raleway Regular" size="15.0" />
+                     </font>
+                  </CheckBox>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="login_button" mnemonicParsing="false" onAction="#login" onMouseEntered="#loginButtonLighter" onMouseExited="#loginButtonDarker" prefHeight="35.0" prefWidth="250.0" text="log in" textFill="#f4f4f4">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Raleway Light" size="18.0" />
+                     </font>
+                  </Button>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
